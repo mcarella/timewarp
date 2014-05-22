@@ -1,0 +1,133 @@
+@import "compass/css3";
+
+/* ========================================================================
+	VARIABLES
+========================================================================== */
+
+/* Colors */
+
+$color-black:				#000000;
+$color-white:				#FFFFFF;
+
+
+$color-links-general:		$color-black;
+
+/* Spacings */
+
+$spacing-default: 30px;
+
+
+/* ========================================================================
+	TYPOGRAPHY
+========================================================================== */
+
+
+/* Font imports */
+
+@font-face {
+	font-family: 'my-font-name';
+	src: url('../fonts/myfontname.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* Fonts variables */
+
+$font-primary: Helvetica, Arial, sans-serif;
+$font-secondary: 'My-Font-Name';
+
+
+/* Typography mixins */
+
+@mixin typography-smoother-font {
+	font-size: 100%;
+	line-height: 1.5;
+ 	-webkit-font-smoothing: antialiased;
+}
+
+@mixin typography-is-title {
+	font-family: $font-secondary;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/* Link reset */
+
+a {
+	color: $color-links-general;
+	text-decoration: none;
+
+	&:active,
+	&:visited {
+		color: $color-links-general;
+	}
+}
+
+
+/* ========================================================================
+	MIXINS
+========================================================================== */
+
+
+/* Clearfix */
+
+@mixin micro-clearfix {
+
+	&:before,
+	&:after {
+		content: ' ';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+
+/* Css gradient generator */
+
+
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+
+/* Smooth transition hack */
+
+@mixin smooth-transition {
+
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+
+/* Momentum scrolling for devices */
+
+@mixin nativeScroll {
+	-webkit-overflow-scrolling: touch;
+	-moz-overflow-scrolling: touch;
+	-ms-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+	overflow-y: scroll;
+}
+
+
+/* Keyframes animation */
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
