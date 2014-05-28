@@ -111,7 +111,7 @@ a {
 
 /* Momentum scrolling for devices */
 
-@mixin nativeScroll {
+@mixin native-scroll {
 	-webkit-overflow-scrolling: touch;
 	-moz-overflow-scrolling: touch;
 	-ms-overflow-scrolling: touch;
@@ -122,24 +122,28 @@ a {
 
 /* Keyframes animation */
 
-@mixin keyframes($name) {
-	@-webkit-keyframes #{$name} {
-		@content;
-	}
-    
-    @-moz-keyframes #{$name} {
-		@content;
-	}
-    
-    @-o-keyframes #{$name} {
-		@content;
-	}
-    
-    @-ms-keyframes #{$name} {
-		@content;
-	}
-    
-	@keyframes #{$name} {
-		@content;
-	}
-}
+@mixin tw-keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }  
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }  
+  @keyframes $animation-name {
+    @content;
+  }
+ }
+
+@mixin tw-animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+  }
