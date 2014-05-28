@@ -102,7 +102,6 @@ a {
 /* Smooth transition hack */
 
 @mixin smooth-transition {
-
 	-webkit-transform: translateZ(0);
 	-moz-transform: translateZ(0);
 	-ms-transform: translateZ(0);
@@ -127,6 +126,19 @@ a {
 	@-webkit-keyframes #{$name} {
 		@content;
 	}
+    
+    @-moz-keyframes #{$name} {
+		@content;
+	}
+    
+    @-o-keyframes #{$name} {
+		@content;
+	}
+    
+    @-ms-keyframes #{$name} {
+		@content;
+	}
+    
 	@keyframes #{$name} {
 		@content;
 	}
