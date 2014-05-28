@@ -1,4 +1,4 @@
-timewarp
+TIMEWARP
 ========
 
 A simple mobile first SASS boilerplate to single page web apps. 
