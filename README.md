@@ -1,7 +1,7 @@
 TIMEWARP
 ========
 
-A simple mobile first SASS boilerplate to single page web apps. 
+A simple mobile first SASS boilerplate for single page web apps. 
 
 ![](http://i1.ytimg.com/vi/4Mky7-t_nsQ/maxresdefault.jpg)
 
