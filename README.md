@@ -18,10 +18,10 @@ Is the place where to put variables declarations (colors, spacings, widths) and 
 **lineHeight-** is the prefix for line height variables. 
 
 ### Resetting styles
-Timewarp comes with **normalize** and Meyer's **reset**. Choose you own, including it into **style.scss**.
+Timewarp comes with **normalize** and Meyer's **reset**. Choose you own, including it into `style.scss`.
 
 `style.scss`
-No style in there, just imports. If you want to change something, edit the corresponding **_layout.wathever.scss** file.
+No style in there, just imports. If you want to change something, edit the corresponding `_layout.wathever.scss` file.
 
 ### Mobile first
 The css architecture is splitted into common breakpoints to help you in responsive development.
