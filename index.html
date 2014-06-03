@@ -31,18 +31,21 @@
         <hr>
 
         <section id="main_content">
-          <p><img src="http://i1.ytimg.com/vi/4Mky7-t_nsQ/maxresdefault.jpg" alt=""></p>
+          <h1>
+<a name="timewarp" class="anchor" href="#timewarp"><span class="octicon octicon-link"></span></a>TIMEWARP</h1>
+
+<p>A simple, mobile-first SASS boilerplate for single page web apps. </p>
+
+<p><img src="http://i1.ytimg.com/vi/4Mky7-t_nsQ/maxresdefault.jpg" alt=""></p>
 
 <h2>
 <a name="scss-folder" class="anchor" href="#scss-folder"><span class="octicon octicon-link"></span></a>SCSS folder</h2>
 
-<h3>
-<a name="_corescss" class="anchor" href="#_corescss"><span class="octicon octicon-link"></span></a>_core.scss</h3>
-
-<p>Is the place where to put variables declarations (colors, spacings, widths) and typography stuff (fonts imports, font variables, etc). You will also find a ready to use set of useful mixins.</p>
+<p><code>_core.scss</code>
+Is the place where to put variables declarations (colors, spacings, widths) and typography stuff (fonts imports, font variables, etc). You will also find a ready to use set of useful mixins.</p>
 
 <h3>
-<a name="variables-coding-convention" class="anchor" href="#variables-coding-convention"><span class="octicon octicon-link"></span></a>Variables coding convention</h3>
+<a name="sass-variables-naming-convention" class="anchor" href="#sass-variables-naming-convention"><span class="octicon octicon-link"></span></a>Sass variables naming convention</h3>
 
 <p><strong>color-</strong> is the prefix for colors variables. 
 <strong>font-</strong> is the prefix for fonts variables. 
@@ -54,36 +57,34 @@
 <h3>
 <a name="resetting-styles" class="anchor" href="#resetting-styles"><span class="octicon octicon-link"></span></a>Resetting styles</h3>
 
-<p>Timewarp comes with <strong>normalize</strong> and Meyer's <strong>reset</strong>. Choose you own, including it into <strong>style.scss</strong>.</p>
+<p>Timewarp comes with <strong>normalize</strong> and Meyer's <strong>reset</strong>. Choose you own, including it into <code>style.scss</code>.</p>
 
-<h3>
-<a name="stylescss" class="anchor" href="#stylescss"><span class="octicon octicon-link"></span></a>style.scss</h3>
-
-<p>No style in there, just imports. If you want to change something, edit the corresponding <strong>_layout.wathever.scss</strong> file.</p>
+<p><code>style.scss</code>
+No style in there, just imports. If you want to change something, edit the corresponding <code>_layout.wathever.scss</code> file.</p>
 
 <h3>
 <a name="mobile-first" class="anchor" href="#mobile-first"><span class="octicon octicon-link"></span></a>Mobile first</h3>
 
 <p>The css architecture is splitted into common breakpoints to help you in responsive development.
-Starting with baseline shared styles (<strong>_layout.common.scss</strong>) and introducing more advanced layout rules when screen size permits keeps code simpler, smaller and more maintainable. That's why you will find files for common breakpoints: <strong>1240up</strong> for large screens, <strong>1030up</strong> for regular desktop screens, <strong>768up</strong> for tablets and small laptops, <strong>481up</strong> for phablets.</p>
+Starting with baseline shared styles (<code>_layout.common.scss</code>) and introducing more advanced layout rules when screen size permits keeps code simpler, smaller and more maintainable. That's why you will find files for common breakpoints: <code>1240up</code> for large screens, <code>1030up</code> for regular desktop screens, <code>768up</code> for tablets and small laptops, <code>481up</code> for phablets.</p>
 
 <h2>
 <a name="js-folder" class="anchor" href="#js-folder"><span class="octicon octicon-link"></span></a>JS folder</h2>
 
 <h3>
-<a name="files-naming-convention" class="anchor" href="#files-naming-convention"><span class="octicon octicon-link"></span></a>files naming convention</h3>
+<a name="files-naming-convention" class="anchor" href="#files-naming-convention"><span class="octicon octicon-link"></span></a>Files naming convention</h3>
 
-<p><strong>app.</strong> is the prefix for your app core files. 
-<strong>lib.</strong> is the prefix for external libraries and dependencies (ex. angular, jquery, etc). 
-<strong>plugin.</strong> is the prefix for jquery plugins.</p>
+<p><code>app.</code> is the prefix for your app core files. 
+<code>lib.</code> is the prefix for external libraries and dependencies (ex. angular, jquery, etc). 
+<code>plugin.</code> is the prefix for jquery plugins.</p>
 
 <h3>
-<a name="javascript-included-files" class="anchor" href="#javascript-included-files"><span class="octicon octicon-link"></span></a>javascript included files</h3>
+<a name="javascript-included-files" class="anchor" href="#javascript-included-files"><span class="octicon octicon-link"></span></a>Javascript included files</h3>
 
-<p><strong>app.controller.js</strong> angularjs app boilerplate. 
-<strong>app.main.js</strong> should contain jquery and presentational stuff.
-<strong>plugin.boilerplate.js</strong> a jquery plugin boilerplate.
-<strong>lib.analytics.js</strong> google analytics, just set the GA code.</p>
+<p><code>app.controller.js</code> angularjs app boilerplate. 
+<code>app.main.js</code> should contain jquery and presentational stuff.
+<code>plugin.boilerplate.js</code> a jquery plugin boilerplate.
+<code>lib.analytics.js</code> google analytics, just set the GA code.</p>
 
 <h2>
 <a name="grunt" class="anchor" href="#grunt"><span class="octicon octicon-link"></span></a>Grunt</h2>
