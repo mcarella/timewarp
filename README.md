@@ -9,7 +9,7 @@ A simple, mobile-first SASS boilerplate for single page web apps.
 `_core.scss`
 Is the place where to put variables declarations (colors, spacings, widths) and typography stuff (fonts imports, font variables, etc). You will also find a ready to use set of useful mixins.
 
-### Variables coding convention
+### Sass variables naming convention
 **color-** is the prefix for colors variables. 
 **font-** is the prefix for fonts variables. 
 **spacing-** is the prefix for spacings variables (margin, paddings).
