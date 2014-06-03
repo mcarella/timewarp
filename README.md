@@ -28,12 +28,12 @@ The css architecture is splitted into common breakpoints to help you in responsi
 Starting with baseline shared styles (`_layout.common.scss`) and introducing more advanced layout rules when screen size permits keeps code simpler, smaller and more maintainable. That's why you will find files for common breakpoints: `1240up` for large screens, `1030up` for regular desktop screens, `768up` for tablets and small laptops, `481up` for phablets.
 
 ## JS folder
-### files naming convention
+### Files naming convention
 `app.` is the prefix for your app core files. 
 `lib.` is the prefix for external libraries and dependencies (ex. angular, jquery, etc). 
 `plugin.` is the prefix for jquery plugins.
 
-### javascript included files
+### Javascript included files
 `app.controller.js` angularjs app boilerplate. 
 `app.main.js` should contain jquery and presentational stuff.
 `plugin.boilerplate.js` a jquery plugin boilerplate.
