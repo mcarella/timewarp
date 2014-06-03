@@ -1,12 +1,12 @@
 TIMEWARP
 ========
 
-A simple mobile first SASS boilerplate for single page web apps. 
+A simple, mobile-first SASS boilerplate for single page web apps. 
 
 ![](http://i1.ytimg.com/vi/4Mky7-t_nsQ/maxresdefault.jpg)
 
 ## SCSS folder
-### _core.scss
+`_core.scss`
 Is the place where to put variables declarations (colors, spacings, widths) and typography stuff (fonts imports, font variables, etc). You will also find a ready to use set of useful mixins.
 
 ### Variables coding convention
