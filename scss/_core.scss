@@ -8,7 +8,8 @@
 
 $color-black:				#000000;
 $color-white:				#FFFFFF;
-
+$color-ok:					#009E61;
+$color-ko:					#E2321B;  
 
 $color-links-general:		$color-black;
 
@@ -31,12 +32,34 @@ $spacing-default: 30px;
 	font-style: normal;
 }
 
+/* Import icon fonts */
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 /* Fonts variables */
 
 $font-primary: Helvetica, Arial, sans-serif;
 $font-secondary: 'My-Font-Name';
 
+$font-button: $font-primary;
+
+/* Link reset */
+
+a {
+	color: $color-links-general;
+	text-decoration: none;
+
+	&:active,
+	&:visited {
+		color: $color-links-general;
+	}
+}
 
 /* Typography mixins */
 
@@ -53,19 +76,6 @@ $font-secondary: 'My-Font-Name';
 }
 
 
-/* Link reset */
-
-a {
-	color: $color-links-general;
-	text-decoration: none;
-
-	&:active,
-	&:visited {
-		color: $color-links-general;
-	}
-}
-
-
 /* ========================================================================
 	MIXINS
 ========================================================================== */
@@ -73,7 +83,7 @@ a {
 
 /* Clearfix */
 
-@mixin micro-clearfix {
+@mixin tw-clearfix {
 
 	&:before,
 	&:after {
@@ -85,11 +95,73 @@ a {
 	}
 }
 
+/* Basic button rules */
+
+@mixin tw-button-rules {
+
+	@include border-radius(3px);
+	font-family: $font-button;
+	min-width: 125px;
+	max-width: 125px;
+	min-height: 32px;
+	max-height: 32px;
+	line-height: 32px;
+	text-align: center;
+	
+
+	&:hover {
+		cursor: pointer;
+		@include transition(background 0.5s);
+	}
+}
+
+/* usage: 
+	.button-regular { 
+		@include tw-button;
+	}
+*/
+
+@mixin tw-button() {
+
+	@include tw-button-rules;
+	background-color: $color-black;
+	color: $color-white;
+
+	&:hover {
+		background-color: $color-white;
+		color: $color-black;
+	}
+}
+
+/* Customizable button 
+	usage: 
+
+	.button-ko {
+		@include tw-button-custom('ko');
+	}
+
+	.button-ok {
+		@include tw-button-custom('ok');
+	}
+*/
+
+@mixin tw-button-custom($arg) {
+
+	@include tw-button-rules;
+
+	@if ($arg=='ko') {
+		background-color: $color-ko;
+	}
+
+	@elseif ($arg=='ok') {
+		background-color: $color-ok;
+	}
+}
+
 
 /* Css gradient generator */
 
-
-@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+@mixin tw-css-gradient($from: #dfdfdf, $to: #f8f8f8) {
 	background-color: $to;
 	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
 	background-image: -webkit-linear-gradient(top, $from, $to);
@@ -101,7 +173,7 @@ a {
 
 /* Smooth transition hack */
 
-@mixin smooth-transition {
+@mixin tw-smooth-transition {
 	-webkit-transform: translateZ(0);
 	-moz-transform: translateZ(0);
 	-ms-transform: translateZ(0);
@@ -111,7 +183,7 @@ a {
 
 /* Momentum scrolling for devices */
 
-@mixin native-scroll {
+@mixin tw-native-scroll {
 	-webkit-overflow-scrolling: touch;
 	-moz-overflow-scrolling: touch;
 	-ms-overflow-scrolling: touch;
@@ -123,27 +195,17 @@ a {
 /* Keyframes animation */
 
 @mixin tw-keyframes($animation-name) {
-  @-webkit-keyframes $animation-name {
-    @content;
-  }
-  @-moz-keyframes $animation-name {
-    @content;
-  }  
-  @-ms-keyframes $animation-name {
-    @content;
-  }
-  @-o-keyframes $animation-name {
-    @content;
-  }  
-  @keyframes $animation-name {
-    @content;
-  }
- }
+	@-webkit-keyframes $animation-name { @content; }
+  	@-moz-keyframes $animation-name { @content; }  
+  	@-ms-keyframes $animation-name { @content; }
+  	@-o-keyframes $animation-name { @content; }
+  	@keyframes $animation-name { @content; }
+}
 
 @mixin tw-animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};      
-  }
+ 	-webkit-animation: #{$str};
+ 	-moz-animation: #{$str};
+ 	-ms-animation: #{$str};
+ 	-o-animation: #{$str};
+	animation: #{$str};      
+}
