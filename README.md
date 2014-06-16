@@ -45,3 +45,7 @@ Time warp comes with grunt to minify, concat, than uglify your scripts.
 ## Compass
 Time warp comes with compass to help you styling things faster.
 
+## Yeoman generator available on NPM
+`npm install -g generator-timewarp`
+`yo timewarp`
+
