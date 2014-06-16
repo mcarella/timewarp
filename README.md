@@ -45,5 +45,3 @@ Time warp comes with grunt to minify, concat, than uglify your scripts.
 ## Compass
 Time warp comes with compass to help you styling things faster.
 
-### [!] NOTE
-This boilerplate is work in progress.
